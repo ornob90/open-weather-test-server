@@ -8,6 +8,7 @@ require("dotenv").config();
 const globalErrorHandler = require("./utils/globalErrorHandler");
 
 // routes
+const weatherRoutes = require("./routes/weather");
 
 // utils
 
@@ -23,6 +24,8 @@ app.use(
     credentials: true,
   })
 );
+
+app.use(weatherRoutes);
 
 const port = process.env.PORT || 5000;
 

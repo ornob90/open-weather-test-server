@@ -1,3 +1,5 @@
+const cities = require("./cities-name");
+
 require("dotenv").config();
 
 const config = {
@@ -5,20 +7,7 @@ const config = {
   CLIENT: process.env.CLIENT,
   OPEN_WEATHER_BASE_URL: "https://api.openweathermap.org",
   GEO_LOCATION_BASE_URL: "https://api.openweathermap.org/geo/1.0/direct",
-  CITIES: [
-    "Hyderabad",
-    "Kolkata",
-    "Kochi",
-    "New Delhi",
-    "Surat",
-    "Jaipur",
-    "Bangalore",
-    "Mumbai",
-    "Goa",
-    "Pune",
-    "Ahmadabad",
-    "Chennai",
-  ],
+  CITIES: cities,
 };
 
 module.exports = Object.freeze(config);
